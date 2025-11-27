@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "colombian-holidays"
+version = "1.0.0"
+description = "Librería para verificar días festivos en Colombia"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+dependencies = []
+authors = [
+    {name = "Alejandro Castellanos", email = "alejandrocastellanos0827@gmail.com"}
+]
+keywords = ["colombia", "holidays", "festivos", "calendario"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=22.0",
+    "flake8>=5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/alejandrocastellanos/colombian-holidays"
+Documentation = "https://github.com/alejandrocastellanos/colombian-holidays#readme"
+Repository = "https://github.com/alejandrocastellanos/colombian-holidays"
+Issues = "https://github.com/alejandrocastellanos/colombian-holidays/issues"
