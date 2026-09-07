@@ -9,7 +9,7 @@ Una librería Python para verificar días festivos en Colombia, incluyendo sopor
 - ✅ Todos los domingos son reconocidos como festivos
 - ✅ Soporte completo para la Ley Emiliani
 - ✅ Cálculo automático de festivos basados en Pascua
-- ✅ 18 festivos oficiales de Colombia
+- ✅ 19 festivos oficiales de Colombia
 
 ## Instalación
 
@@ -86,6 +86,7 @@ for fecha in fechas:
 - Epifanía
 - San José
 - San Pedro y San Pablo
+- Nuestra Señora del Rosario de Chiquinquirá (desde 2026, Ley 2578)
 - Asunción de la Virgen
 - Día de la Raza
 - Todos los Santos
