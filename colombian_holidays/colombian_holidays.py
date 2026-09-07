@@ -8,7 +8,11 @@ All Sundays are considered holidays in Colombia.
 from datetime import datetime, timedelta
 from typing import Optional
 
-from colombian_holidays.constants import FIXED_HOLIDAYS, MOVABLE_TO_MONDAY
+from colombian_holidays.constants import (
+    FIXED_HOLIDAYS,
+    MOVABLE_HOLIDAY_SINCE_YEAR,
+    MOVABLE_TO_MONDAY,
+)
 from colombian_holidays.utils import calculate_easter, move_to_monday
 
 
@@ -80,6 +84,9 @@ class ColombianHolidays:
 
         # Add movable holidays (moved to Monday by Emiliani Law)
         for (month, day), name in MOVABLE_TO_MONDAY.items():
+            since_year = MOVABLE_HOLIDAY_SINCE_YEAR.get((month, day))
+            if since_year is not None and year < since_year:
+                continue
             original_date = datetime(year, month, day)
             moved_date = move_to_monday(original_date)
             holidays[(moved_date.month, moved_date.day)] = name
